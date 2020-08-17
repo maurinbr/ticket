@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <span>Ticket</span>
+    <span class="spacer"></span>
+    <button routerLink="/tickets" mat-raised-button>All</button>
+    &nbsp;
+    <button routerLink="/tickets/create" mat-raised-button>Create</button>
+    &nbsp;
+    <button routerLink="/tickets/:id" mat-raised-button>ID</button>
+    &nbsp;
+    <button routerLink="/tickets/:id/update" mat-raised-button>Update</button>
+    &nbsp;
+</mat-toolbar>
+<p>tickets works!</p>
+
+<router-outlet></router-outlet>
+
+
+<button routerLink="/" mat-raised-button>Fermer</button>

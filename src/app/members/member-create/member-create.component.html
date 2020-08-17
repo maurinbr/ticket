@@ -1,0 +1,20 @@
+<p>member-create works!</p>
+
+<form class="create-form">
+    <mat-form-field class="create-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="create-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="create-full-width">
+        <mat-label>Role</mat-label>
+        <input matInput>
+    </mat-form-field>
+</form>
+
+<button (click)="createMember(0,'lastname','firstname','role')" mat-raised-button>Créer Membre</button>

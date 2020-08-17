@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <span>Members</span>
+    <span class="spacer"></span>
+    <button routerLink="/members" mat-raised-button>All</button>
+    &nbsp;
+    <button routerLink="/members/create" mat-raised-button>Create</button>
+    &nbsp;
+    <button routerLink="/members/:id" mat-raised-button>ID</button>
+    &nbsp;
+    <button routerLink="/members/:id/update" mat-raised-button>Update</button>
+    &nbsp;
+
+</mat-toolbar>
+<p>members works!</p>
+
+<router-outlet></router-outlet>
+
+<button routerLink="/" mat-raised-button>Fermer</button>
+

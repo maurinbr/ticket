@@ -1,0 +1,17 @@
+<p>member-list works!</p>
+  <table class="table table-hover table-striped table-bordered table-responsive-md table-sm">
+    <thead>
+      <tr>
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data" (click)="select(row)">
+        <td *ngFor="let column of headers">
+          {{row[column]}}
+        </td>
+      </tr>
+    </tbody>
+  </table>

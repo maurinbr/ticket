@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <span>Tasks</span>
+    <span class="spacer"></span>
+    <button routerLink="/tasks" mat-raised-button>All</button>
+    &nbsp;
+    <button routerLink="/tasks/create" mat-raised-button>Create</button>
+    &nbsp;
+    <button routerLink="/tasks/:id" mat-raised-button>ID</button>
+    &nbsp;
+    <button routerLink="/tasks/:id/update" mat-raised-button>Update</button>
+    &nbsp;
+
+</mat-toolbar>
+
+<p>tasks works!</p>
+
+<router-outlet></router-outlet>
+
+<button routerLink="/" mat-raised-button>Fermer</button>
