@@ -1,9 +1,25 @@
 <p>member works!</p>
 
-{{member.lastName}}
+<!-- Tester si le membre existe -->
+<div *ngIf="member">
+<!-- Produire la Card -->
+<div class="card">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:300px">
+    <div class="container">
 
-{{member.firstName}}
+            <h4>
+                <p><b>{{member.lastName}}</b></p>
+            </h4>
 
-{{member.role}}
+            <p>{{member.firstName}}</p>
+
+            <p>{{member.role}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 <button (click)="delete(member)" mat-raised-button>Supprimer Membre</button>
