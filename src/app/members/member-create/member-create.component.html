@@ -1,20 +1,32 @@
-<p>member-create works!</p>
-
-<form class="create-form">
-    <mat-form-field class="create-full-width">
-        <mat-label>Last Name</mat-label>
-        <input matInput>
-    </mat-form-field>
-
-    <mat-form-field class="create-full-width">
+<form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
         <mat-label>First Name</mat-label>
-        <input matInput>
+        <input matInput formControlName="firstName" autofocus>
+        <mat-error *ngIf="memberForm.controls.firstName.hasError('minlength')">
+            First Name is too short
+        </mat-error>
+        <mat-error *ngIf="memberForm.controls.firstName.hasError('required')">
+            First Name is required
+        </mat-error>
     </mat-form-field>
 
-    <mat-form-field class="create-full-width">
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="firstName">
+        <mat-error *ngIf="memberForm.controls.lastName.hasError('minlength')">
+            Last Name is too short
+        </mat-error>
+        <mat-error *ngIf="memberForm.controls.lastName.hasError('required')">
+            Last Name is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
         <mat-label>Role</mat-label>
-        <input matInput>
+        <input matInput formControlName="role">
+        <mat-error *ngIf="memberForm.controls.lastName.hasError('required')">
+            Role is required
+        </mat-error>
     </mat-form-field>
+    <button mat-raised-button>Submit</button>
 </form>
-
-<button (click)="createMember(0,'lastname','firstname','role')" mat-raised-button>Créer Membre</button>
