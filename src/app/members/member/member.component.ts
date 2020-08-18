@@ -31,9 +31,8 @@ export class MemberComponent implements OnInit {
   }
   //Supprimer un membre de la liste
   //TODO ajouter à liste.service
-  deleteMember(member: Member) {
-    this.liste.memberList.splice(
-      this.liste.memberList.indexOf(member), 1)
+  delete(member: Member) {
+    this.liste.deleteMember(member)
     //rediriger vers la liste avec le service router
     this.router.navigate(["members"])
   }

@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { MembersModule } from './members/members.module';
 import { TasksModule } from './tasks/tasks.module';
 import { TicketsModule } from './tickets/tickets.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TicketsModule } from './tickets/tickets.module';
     TasksModule,
     TicketsModule,
     AppRoutingModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
