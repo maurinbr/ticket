@@ -38,6 +38,8 @@ export class MemberListComponent implements OnInit {
   }
   //Router vers le membre qu'on a clické 
   select(member: Member) {
+    member = this.liste.getMemberById(member.id)
+    
     this.router.navigate(["members/" + member.id])
   }
   
