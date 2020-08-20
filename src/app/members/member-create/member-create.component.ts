@@ -14,6 +14,9 @@ export class MemberCreateComponent implements OnInit {
   /*Déclarer un objet de type Membre*/
   public member: Member = new Member;
 
+
+  public roles:String[]
+
   /*Déclarer le formulaire*/
   public memberForm: FormGroup;
 
@@ -25,17 +28,21 @@ export class MemberCreateComponent implements OnInit {
 
   ngOnInit(): void {
 
+    /* Liste des roles */
+    this.roles = ['client','user']
+
     /* Instancier le formulaire */
     this.memberForm = this.formB.group({
       lastName: ['LastName',
         [Validators.required, Validators.minLength(3)]],
       firstName: ['FirstName',
         [Validators.required, Validators.minLength(3)]],
-      role: ['Role', Validators.required],
+      role: ['', Validators.required],
     }, {
       updateOn: "submit"
     })
   }
+
   /* Validation du formulaire */
   onSubmit() {
     if (this.memberForm.valid) {
@@ -46,6 +53,8 @@ export class MemberCreateComponent implements OnInit {
 
       /*ajouter le Membre à la liste*/
       this.liste.addMember(this.member)
+
+
 
       /*rediriger vers la liste avec le service router*/
       this.router.navigate(["members"])
